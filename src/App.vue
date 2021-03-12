@@ -17,8 +17,8 @@ import Search from "@/components/Search.vue";
 export default {
   name: "Home",
   components: {
-    Search,
-  },
+    Search
+  }
 };
 </script>
 

@@ -16,7 +16,7 @@ export default {
   name: "Search",
   data() {
     return {
-      searchTerm: "",
+      searchTerm: ""
     };
   },
   methods: {
@@ -26,8 +26,8 @@ export default {
       this.addSearchTerm(this.searchTerm);
       this.clearGifs();
       this.addGifs();
-    },
-  },
+    }
+  }
 };
 </script>
 

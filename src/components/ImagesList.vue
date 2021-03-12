@@ -14,19 +14,19 @@ import { mapActions } from "vuex";
 export default {
   name: "ImagesList",
   props: {
-    images: Array,
+    images: Array
   },
   data() {
     return {
-      itemClass: "images-list__item",
+      itemClass: "images-list__item"
     };
   },
   methods: {
     ...mapActions(["addFavoriteGif"]),
     clickFavorite(gif) {
       this.addFavoriteGif(gif);
-    },
-  },
+    }
+  }
 };
 </script>
 
