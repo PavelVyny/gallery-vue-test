@@ -17,30 +17,25 @@ export default {
   },
   computed: {
     ...mapState({
-      images: (state) => state.imageList.images,
-      searchTerm: (state) => state.imageList.searchTerm,
-      offset: (state) => state.imageList.offset,
-      isBottom: (state) => state.imageList.isBottom,
-      firstLoad: (state) => state.imageList.firstLoad,
-      searchLoad: (state) => state.imageList.searchLoad,
+      images: state => state.imageList.images,
+      isBottom: state => state.imageList.isBottom
     })
-  },
-  watch: {
-    bottom(newValue) {
-      if (newValue) {
-        this.addGifs(this.firstLoad, this.searchLoad);
-      }
-    },
   },
   created() {
     window.addEventListener("scroll", () => {
-      this.scrollBottom();
+      this.bottom();
     });
-    this.addGifs(this.firstLoad, this.searchLoad);
+    this.addGifs();
   },
   methods: {
     ...mapActions(["addGifs", "scrollBottom"]),
-  },
+    bottom() {
+      this.scrollBottom();
+      if (this.isBottom) {
+        this.addGifs();
+      }
+    }
+  }
 };
 </script>
 
