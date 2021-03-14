@@ -2,7 +2,7 @@ export const buildGifs = result => {
 	return result.data
 		.map((gif) => gif.id)
 		.map((gifId) => {
-			return `https://media.giphy.com/media/${gifId}/giphy.gif`;
+			return `https://media.giphy.com/media/${gifId}/200w.webp`;
 		});
 }
 
