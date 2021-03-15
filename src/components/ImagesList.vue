@@ -43,6 +43,7 @@ export default {
     margin-bottom: 24px;
     position: relative;
     margin-right: 24px;
+    overflow: hidden;
 
     &:nth-of-type(4n + 4) {
       margin-right: 0;
@@ -72,6 +73,12 @@ export default {
     max-width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 150ms linear 0s;
+    transform: scale(1);
+
+    &:hover {
+      transform: scale(1.15);
+    }
   }
 
   &__button {
@@ -87,6 +94,7 @@ export default {
     padding: 0;
     border: 0;
     cursor: pointer;
+    z-index: 1;
 
     &:hover {
       &::before {

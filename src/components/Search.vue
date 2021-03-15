@@ -1,5 +1,5 @@
 <template>
-  <div class="search">
+  <form class="search">
     <input
       class="search__input"
       v-model="searchTerm"
@@ -7,7 +7,7 @@
       type="text"
     />
     <button class="search__button" @click="submit()">Search</button>
-  </div>
+  </form>
 </template>
 
 <script>
@@ -75,6 +75,11 @@ export default {
   }
 
   &__button {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    width: 50px;
+    height: 100%;
     cursor: pointer;
   }
 }
